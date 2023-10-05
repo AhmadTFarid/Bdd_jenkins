@@ -1,5 +1,7 @@
-package tek.bdd.steps;
+package bddFreamWork.steps;
 
+import bddFreamWork.BaseSetup.BaseSetup;
+import bddFreamWork.utility.SeleniumUtility;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -8,7 +10,6 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import tek.bdd.utility.SeleniumUtility;
 
 import java.util.List;
 
@@ -17,10 +18,10 @@ public class LoginSteps extends SeleniumUtility {
 
     @Then("Validate application title should be {string}")
     public void validateApplicationTitleShouldBe(String ActualTitle)  {
-        getDriver().getTitle();
+        BaseSetup.getDriver().getTitle();
         String ExpectedTitle = "Tek Insurance Service";
         Assert.assertEquals("Tek Insurance Service",ExpectedTitle,ActualTitle);
-        System.out.println(getDriver().getTitle());
+        System.out.println(BaseSetup.getDriver().getTitle());
 
     }
 
@@ -63,13 +64,13 @@ public class LoginSteps extends SeleniumUtility {
     public void validateErrorMessage(String actualMassage) {
         if (actualMassage.equalsIgnoreCase("User not found"))
         {
-            String expectedMassage = getDriver().findElement(CommonSteps.LoginUserErorrMasage).getText();
+            String expectedMassage = BaseSetup.getDriver().findElement(CommonSteps.LoginUserErorrMasage).getText();
             Assert.assertEquals("Validate error message",actualMassage,expectedMassage);
             System.out.println(actualMassage);
 
 
         } else if ( actualMassage.equalsIgnoreCase("Password Not Matched")){
-            String expectedMassage = getDriver().findElement(CommonSteps.LoginPasswordErorrMasage).getText();
+            String expectedMassage = BaseSetup.getDriver().findElement(CommonSteps.LoginPasswordErorrMasage).getText();
             Assert.assertEquals("Validate error message",actualMassage,expectedMassage);
             System.out.println("Your Actual Rrorr Massage is: "+ actualMassage);
         }
@@ -78,8 +79,8 @@ public class LoginSteps extends SeleniumUtility {
 
     @Given("Login with username as {string} and password as {string}")
     public void loginWithUsernameAsAndPasswordAs(String username, String password) {
-        getDriver().findElement(CommonSteps.username ).sendKeys("supervisor");
-        getDriver().findElement(CommonSteps.password).sendKeys("tek_supervisor");
+        BaseSetup.getDriver().findElement(CommonSteps.username ).sendKeys("supervisor");
+        BaseSetup.getDriver().findElement(CommonSteps.password).sendKeys("tek_supervisor");
       
 
     }
@@ -92,20 +93,20 @@ public class LoginSteps extends SeleniumUtility {
 
     @When("Click on {string} Link")
     public void clickOnLink(String xpath) throws InterruptedException {
-        getDriver().findElement(By.xpath("/html/body/app-root/app-home-page/mat-drawer-container/mat-drawer/div/app-menu-items/mat-nav-list/a[2]")).sendKeys(Keys.RETURN);
+        BaseSetup.getDriver().findElement(By.xpath("/html/body/app-root/app-home-page/mat-drawer-container/mat-drawer/div/app-menu-items/mat-nav-list/a[2]")).sendKeys(Keys.RETURN);
         Thread.sleep(1000);
     }
 
     @Then("Validate Section title is {string}")
     public void validateSectionTitleIs(String title) {
-       title= getDriver().findElement(By.xpath("/html/body/app-root/app-home-page/mat-drawer-container/mat-drawer/div/app-menu-items/mat-nav-list/a[2]/span[1]/span")).getText();
+       title= BaseSetup.getDriver().findElement(By.xpath("/html/body/app-root/app-home-page/mat-drawer-container/mat-drawer/div/app-menu-items/mat-nav-list/a[2]/span[1]/span")).getText();
         System.out.println(title);
     }
 
     @Then("Validate Table row is {int}")
     public void validateTableRowIs(int pageElement) {
 
-        List<WebElement> plan = getDriver().findElements(By.xpath("/html/body/app-root/app-home-page/mat-drawer-container/mat-drawer-content/div/app-plans-list/mat-card/mat-card-content/mat-card/mat-card-content/div/table/thead/tr"));
+        List<WebElement> plan = BaseSetup.getDriver().findElements(By.xpath("/html/body/app-root/app-home-page/mat-drawer-container/mat-drawer-content/div/app-plans-list/mat-card/mat-card-content/mat-card/mat-card-content/div/table/thead/tr"));
 
            for ( WebElement planElements :plan ){
             System.out.println("element for plans page is: " + planElements.getText().trim().concat("|"));
@@ -115,7 +116,7 @@ public class LoginSteps extends SeleniumUtility {
 
     @And("Validate All Plans are Valid")
     public void validateAllPlansAreValid() {
-        List<WebElement> callam = getDriver().findElements(By.xpath("/html/body/app-root/app-home-page/mat-drawer-container/mat-drawer-content/div/app-plans-list/mat-card/mat-card-content"));
+        List<WebElement> callam = BaseSetup.getDriver().findElements(By.xpath("/html/body/app-root/app-home-page/mat-drawer-container/mat-drawer-content/div/app-plans-list/mat-card/mat-card-content"));
         for ( WebElement allCallam :callam ){
              System.out.println("all Elements : "+ allCallam.getText().trim().concat("|"));
          }

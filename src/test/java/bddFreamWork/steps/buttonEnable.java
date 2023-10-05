@@ -1,12 +1,12 @@
-package tek.bdd.steps;
+package bddFreamWork.steps;
 
+import bddFreamWork.BaseSetup.BaseSetup;
+import bddFreamWork.utility.buttonUtility;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import tek.bdd.utility.buttonUtility;
-import tek.bdd.BaseSetup;
 
 public class buttonEnable extends buttonUtility {
 

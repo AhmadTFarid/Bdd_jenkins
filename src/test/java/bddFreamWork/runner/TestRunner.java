@@ -1,4 +1,4 @@
-package tek.bdd.runner;
+package bddFreamWork.runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;

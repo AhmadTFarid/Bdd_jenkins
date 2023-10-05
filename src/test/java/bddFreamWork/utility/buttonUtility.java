@@ -1,6 +1,6 @@
-package tek.bdd.utility;
+package bddFreamWork.utility;
 
-import tek.bdd.BaseSetup;
+import bddFreamWork.BaseSetup.BaseSetup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;

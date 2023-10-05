@@ -1,7 +1,7 @@
-package tek.bdd.steps;
+package bddFreamWork.steps;
 
+import bddFreamWork.BaseSetup.BaseSetup;
 import org.openqa.selenium.By;
-import tek.bdd.BaseSetup;
 
 public class CommonSteps extends BaseSetup {
     public static final By PageTitle = By.xpath("//mat-toolbar/span[1]");

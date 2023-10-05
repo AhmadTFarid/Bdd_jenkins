@@ -1,11 +1,12 @@
-package tek.bdd.steps;
+package bddFreamWork.steps;
 
+import bddFreamWork.BaseSetup.BaseSetup;
+import bddFreamWork.utility.SeleniumUtility;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import tek.bdd.utility.SeleniumUtility;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,7 +25,7 @@ public class hooks extends SeleniumUtility {
     public void cleanUpTests() throws IOException {
 
 
-        TakesScreenshot ts = (TakesScreenshot) getDriver();
+        TakesScreenshot ts = (TakesScreenshot) BaseSetup.getDriver();
         File src = ts.getScreenshotAs(OutputType.FILE);
         File trg = new File(".\\screenshots\\Homepage.png");
         FileUtils.copyFile(src, trg);

@@ -1,4 +1,4 @@
-package tek.bdd;
+package bddFreamWork.BaseSetup;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
