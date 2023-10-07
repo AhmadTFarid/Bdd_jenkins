@@ -1,7 +1,7 @@
-package bddFreamWork.steps;
+package Bdd_FrameWork.steps;
 
-import bddFreamWork.BaseSetup.BaseSetup;
-import bddFreamWork.utility.buttonUtility;
+import Bdd_FrameWork.BaseSetup.BaseSetup;
+import Bdd_FrameWork.utility.buttonUtility;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;

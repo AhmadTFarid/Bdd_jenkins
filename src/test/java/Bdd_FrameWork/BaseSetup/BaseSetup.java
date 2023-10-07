@@ -1,4 +1,4 @@
-package bddFreamWork.BaseSetup;
+package Bdd_FrameWork.BaseSetup;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
