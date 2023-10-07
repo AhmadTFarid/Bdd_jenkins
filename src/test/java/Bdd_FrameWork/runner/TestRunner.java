@@ -1,4 +1,4 @@
-package bddFreamWork.runner;
+package Bdd_FrameWork.runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -7,8 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "classpath:features",
-        glue = "tek.bdd.steps",
-        tags = "@US_7",
+        glue = "Bdd_FrameWork.steps",
+        tags = "@Smock",
         plugin = {
                 "html:target/html_report/report.html"
         }

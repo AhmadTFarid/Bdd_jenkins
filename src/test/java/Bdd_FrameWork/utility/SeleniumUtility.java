@@ -1,6 +1,6 @@
-package bddFreamWork.utility;
+package Bdd_FrameWork.utility;
 
-import bddFreamWork.BaseSetup.BaseSetup;
+import Bdd_FrameWork.BaseSetup.BaseSetup;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
