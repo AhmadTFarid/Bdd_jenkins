@@ -46,10 +46,10 @@ Feature:Test Application Tile
     Then Validate error message "<error massage>"
     Examples:
       | username    | password        | error massage        |
-      | supervisorq | tek_supervisor  | User not found       |
-      | supervisor  | tek_supervisorq | Password Not Matched |
-      | supervisor  | farid           | Password Not Matched |
-      | tariq       | tek_supervisor  | User not found       |
+      | supervisorq | tek_supervisor  | User supervisorq not found       |
+      | supervisor  | tek_supervisorq | Password not matched |
+      | supervisor  | farid           | Password not matched |
+      | tariq       | tek_supervisor  | User tariq not found       |
 
 
   @US_7

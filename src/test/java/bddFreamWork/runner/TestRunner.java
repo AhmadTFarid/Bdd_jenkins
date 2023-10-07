@@ -7,8 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "classpath:features",
-        glue = "tek.bdd.steps",
-        tags = "@US_7",
+        glue = "bddFrameWork.steps",
+        tags = "@US_4",
         plugin = {
                 "html:target/html_report/report.html"
         }
