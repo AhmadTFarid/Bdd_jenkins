@@ -1,7 +1,7 @@
-package bddFreamWork.steps;
+package Bdd_FrameWork.steps;
 
-import bddFreamWork.BaseSetup.BaseSetup;
-import bddFreamWork.utility.SeleniumUtility;
+import Bdd_FrameWork.BaseSetup.BaseSetup;
+import Bdd_FrameWork.utility.SeleniumUtility;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

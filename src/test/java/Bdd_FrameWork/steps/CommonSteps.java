@@ -1,6 +1,6 @@
-package bddFreamWork.steps;
+package Bdd_FrameWork.steps;
 
-import bddFreamWork.BaseSetup.BaseSetup;
+import Bdd_FrameWork.BaseSetup.BaseSetup;
 import org.openqa.selenium.By;
 
 public class CommonSteps extends BaseSetup {
